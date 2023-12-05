@@ -7,23 +7,26 @@
     /* Styles for the button and modal overlay */
     .code-button {
       display: inline-block;
-      padding: 8px 13px;
+      padding: 5px 10px; /* Decreased padding for the button */
       background-color: #f0f0f0;
-      border: 1px solid #ccc;
+      border: 1px solid #000; /* Set border color to black */
       border-radius: 5px;
       cursor: pointer;
       font-family: monospace;
-      font-size: 20px;
+      font-size: 15px; /* Decreased font size for the button */
       float: left; /* Float the button to the left */
     }
 
     .modal-overlay {
       display: none;
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      top: 50%; /* Center the modal vertically */
+      left: 50%; /* Center the modal horizontally */
+      transform: translate(-50%, -50%); /* Center the modal */
+      width: 60%; /* Set the initial width (less than 100%) */
+      height: 120%; /* Set the initial height (twice the width) */
+      max-width: 80%; /* Maximum width of the modal overlay */
+      max-height: 50vh; /* Maximum height of the modal overlay */
       background: rgba(0, 0, 0, 0.5);
       justify-content: center;
       align-items: center;
@@ -32,19 +35,21 @@
 
     .modal-content {
       background-color: #fff;
-      padding: 40px; /* Adjust the padding to increase or decrease modal size */
+      padding: 40px; /* Padding for the modal content */
       border-radius: 5px;
       position: relative;
       animation: fadeIn 0.3s ease; /* Example of modal animation */
-      max-width: 80%; /* Maximum width of the modal */
-      max-height: 80vh; /* Maximum height of the modal */
+      width: 100%; /* Width of the modal content */
+      height: 100%; /* Height of the modal content */
       overflow-y: auto; /* Enable scrolling if the content exceeds the modal height */
     }
 
     .modal-header {
       text-align: center;
-      font-size: 24px; /* Adjust the font size to change the header size */
-      margin-bottom: 20px;
+      font-size: 24px; /* Font size for the modal header */
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ccc; /* Border between header and body */
+      padding-bottom: 10px; /* Space between header text and border */
     }
 
     .close-button {
@@ -52,7 +57,7 @@
       top: 10px;
       right: 10px;
       cursor: pointer;
-      font-size: 18px; /* Adjust the font size to change the close button size */
+      font-size: 18px; /* Font size for the close button */
     }
 
     /* Example of fadeIn animation */
