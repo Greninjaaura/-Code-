@@ -72,13 +72,13 @@
 <button class="code-button" onclick="openModal()">&lt;/&gt;</button>
 
 <!-- Modal overlay and content -->
-<div id="modal" class="modal-overlay" onclick="closeModal()">
+<div id="modal" class="modal-overlay" onclick="closeModal(event)">
   <div class="modal-content">
     <div class="modal-header">
       <h2>Modal Header</h2>
     </div>
     <!-- Close button inside the modal -->
-    <span class="close-button" onclick="closeModal()">X</span>
+    <span class="close-button" onclick="closeModal(event)">X</span>
     <!-- Information to show to the client -->
     <p>This is the information you want to show to the client. It can include any dynamic content, and the modal is resizable and scrollable if needed.</p>
   </div>
@@ -92,8 +92,10 @@
     modal.querySelector('.modal-content').focus(); // Set focus to modal content
   }
 
-  function closeModal() {
-    // No action required to close the modal
+  function closeModal(event) {
+    if (event.target.classList.contains('close-button')) {
+      document.getElementById("modal").style.display = "none";
+    }
   }
 </script>
 
