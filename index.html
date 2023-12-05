@@ -17,6 +17,17 @@
       float: left; /* Float the button to the left */
     }
 
+    .code-text {
+      display: inline-block;
+      padding: 5px 10px; /* Same padding as the button */
+      background-color: #000; /* Dark black background color */
+      color: #fff; /* White text color */
+      border: 1px solid #808080; /* Gray border color */
+      border-radius: 0 5px 5px 0; /* Semi-circle border radius */
+      font-family: monospace;
+      font-size: 15px; /* Font size for the text */
+    }
+
     .modal-overlay {
       display: none;
       position: fixed;
@@ -57,8 +68,8 @@
 
     .close-button {
       position: absolute;
-      top: 10px;
-      right: 10px;
+      top: 5px;
+      right: 5px;
       cursor: pointer;
       font-size: 18px; /* Font size for the close button */
     }
@@ -79,14 +90,17 @@
 <!-- Button with the code icon to open the modal -->
 <button class="code-button" onclick="openModal()">&lt;/&gt;</button>
 
+<!-- "Code" text next to the button -->
+<div class="code-text">Code</div>
+
 <!-- Modal overlay and content -->
 <div id="modal" class="modal-overlay" onclick="closeModal(event)">
   <div class="modal-content">
+    <!-- Close button inside the modal -->
+    <span class="close-button" onclick="closeModal(event)">X</span>
     <div class="modal-header">
       <h2>Modal Header</h2>
     </div>
-    <!-- Close button inside the modal -->
-    <span class="close-button" onclick="closeModal(event)">X</span>
     <!-- Information to show to the client -->
     <p>This is the information you want to show to the client. It can include any dynamic content, and the modal is resizable and scrollable if needed.</p>
   </div>
