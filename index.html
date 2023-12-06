@@ -23,6 +23,10 @@
       transform: translateX(-50%); /* Center the element */
     }
 
+    .button-text-line {
+      border-bottom: 1px solid #000;
+    }
+
     /* Styles for the button and modal overlay (from the modal project) */
     .code-button {
       display: inline-block;
@@ -115,13 +119,13 @@
 <body>
 
 <!-- "Code" text element -->
-<div class="code-text">Code</div>
+<div class="code-text button-text-line">Code</div>
 
 <!-- New code icon -->
-<div class="new-code-icon">&#60;/&#62;</div>
+<div class="new-code-icon button-text-line">&#60;/&#62;</div>
 
 <!-- Button with the code icon to open the modal (from the modal project) -->
-<button class="code-button" onclick="openModal()"><i class="fa fa-info-circle"></i></button>
+<button class="code-button button-text-line" onclick="openModal()"><i class="fa fa-info-circle"></i></button>
 
 <!-- Modal overlay and content (from the modal project) -->
 <div id="modal" class="modal-overlay" onclick="closeModal(event)">
