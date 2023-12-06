@@ -39,6 +39,23 @@
       right: 10px; /* Distance from the right of the website */
     }
 
+    /* New code icon styles */
+        .new-code-icon {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            background-color: #000;
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
     .modal-overlay {
       display: none;
       position: fixed;
@@ -100,6 +117,9 @@
 
 <!-- "Code" text element -->
 <div class="code-text">Code</div>
+
+<!-- New code icon -->
+<div class="new-code-icon">&#60;/&#62;</div>
 
 <!-- Button with the code icon to open the modal (from the modal project) -->
 <button class="code-button" onclick="openModal()"><i class="fa fa-info-circle"></i></button>
